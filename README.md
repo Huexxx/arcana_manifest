@@ -9,7 +9,7 @@
 ```bash
 
 # Initialize local repository
-repo init -u https://github.com/projectarcana-aosp/manifest -b 12.x
+repo init -u https://github.com/Huexxx/arcana_manifest -b 12.x
 
 # Sync
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
@@ -20,10 +20,10 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```bash
 
 # Initialize local repository  (thanks to apon77 for repo init script)
-repo init --depth=1 --no-repo-verify -u https://github.com/projectarcana-aosp/manifest -b 12.x -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/Huexxx/arcana_manifest -b 12.x -g default,-mips,-darwin,-notdefault
 
 # Sync
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -jX
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j12
 ```
 
 ### Device bringup ###
@@ -82,10 +82,10 @@ USE_PIXEL_CHARGER_IMAGES := true/false
 $ source build/envsetup.sh
 
 # Choose a target
-$ lunch aosp_$device-userdebug
+$ lunch aosp_chiron_gms-userdebug
 
 # Build the code
-$ make bacon -jX
+$ make bacon -j12
 ```
 
 Credits
